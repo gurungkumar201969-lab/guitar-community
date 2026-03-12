@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guitar Learning Invitation</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#1a0000,#4b0000);
+font-family:Arial;
+overflow:hidden;
+}
+
+/* Floating edge lights */
+body::before, body::after{
+content:"";
+position:absolute;
+width:300px;
+height:300px;
+background:rgba(255,0,0,0.25);
+filter:blur(120px);
+border-radius:50%;
+animation:floatLight 8s infinite alternate;
+}
+
+body::after{
+right:0;
+bottom:0;
+animation-delay:2s;
+}
+
+@keyframes floatLight{
+from{transform:translateY(-20px)}
+to{transform:translateY(40px)}
+}
+
+/* Floating guitars */
+.guitar{
+position:absolute;
+font-size:60px;
+opacity:0.08;
+animation:float 12s linear infinite;
+}
+
+@keyframes float{
+from{transform:translateY(100vh)}
+to{transform:translateY(-100vh)}
+}
+
+/* Main Card */
+.card{
+background:rgba(20,0,0,0.8);
+padding:40px;
+border-radius:25px;
+text-align:center;
+color:white;
+box-shadow:0 0 40px rgba(255,0,0,0.4);
+backdrop-filter:blur(10px);
+}
+
+/* Button */
+.join{
+display:inline-block;
+margin-top:20px;
+padding:12px 28px;
+border-radius:30px;
+background:#ff1a1a;
+color:white;
+text-decoration:none;
+transition:0.3s;
+box-shadow:0 0 10px rgba(255,0,0,0.6);
+}
+
+.join:hover{
+box-shadow:0 0 25px rgba(255,50,50,1);
+transform:scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- floating guitars -->
+<div class="guitar" style="left:10%">🎸</div>
+<div class="guitar" style="left:40%">🎸</div>
+<div class="guitar" style="left:70%">🎸</div>
+
+<div class="card">
+
+<h1>Learn Guitar Together 🎸</h1>
+
+<p>
+Join our guitar learning community.<br>
+Practice together, share ideas, and improve every day.
+</p>
+
+<a class="join" href="https://wa.me/918967524982">Join on WhatsApp</a>
+
+</div>
+
+</body>
+</html>
